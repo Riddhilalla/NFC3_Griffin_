@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+
+<h1>All Products</h1>
+
+<% products.forEach(product => { %>
+    <div class="product">
+        <h2><%= product.name %></h2>
+        <p>Price: $<%= product.price %></p>
+        <p>Description: <%= product.description %></p>
+        <img src="<%= product.image.url %>" alt="<%= product.name %>">
+    </div>
+<% }); %>

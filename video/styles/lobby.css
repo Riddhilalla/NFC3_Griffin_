@@ -1,0 +1,119 @@
+body{
+  background-image: 
+
+  url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN1cHBvcnQlMjBncm91cCUyMG1lZXRpbmdzfGVufDB8fDB8fHww'); /* Background image */
+background-size: cover; /* Ensures the image covers the entire area */
+
+background-repeat: no-repeat;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+#form__container {
+  width: 90%;
+  margin-top: 30px;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #DAD7CD;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#lobby__form {
+  padding: 2em;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#form__container__header {
+  border-radius: 10px 10px 0 0;
+  padding: 10px ;
+ ;
+  background-color: #3A5A40;
+  margin: 0;
+  text-align: center;
+
+
+  line-height: 0;
+}
+#form__container__header p{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500
+}
+.form__field__wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.form__field__wrapper label {
+  font-size: 14px;
+  line-height: 1.7em;
+  color: #3A5A40;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Poppins", sans-serif; 
+}
+
+.form__field__wrapper input {
+  box-sizing: border-box;
+  color: #DAD7CD;
+  width: 100%;
+  margin: 0;
+  font-weight: 200;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 20px;
+  font-size: 15px;
+  background-color: #3A5A40;
+}
+
+.form__field__wrapper button[type='submit'] {
+  margin-top: 32px;
+  cursor: pointer;
+  background-color: #3A5A40;
+  border: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.form__field__wrapper button[type='submit'] svg {
+  fill: #DAD7CD;
+  width: 20px;
+}
+
+#avatar__selection {
+  margin-right: 10px;
+  display: flex;
+  gap: 1em;
+}
+
+.avatar__option {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid #797a79;
+}
+
+.avatar__option__selected {
+  border: 3px solid #845695;
+}
