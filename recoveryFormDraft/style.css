@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #DAD7CD;
+    --form-bg-color: #FFFFFF;
+    --header-color: #3A5A40;
+    --border-color: #CCC;
+    --button-color: #344E41;
+    --button-hover-color: #588157;
+    --button-disabled-color: #A3B18A;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; 
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--form-bg-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.form-header {
+    background-color: var(--header-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.form-title {
+    color: var(--form-bg-color);
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-body {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: var(--form-bg-color);
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    margin: 40px auto 0;
+    width: 30%; 
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: #FFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+
+.submit-button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+.form-group select option:hover {
+    background-color: var(--button-color);
+}
+
+
