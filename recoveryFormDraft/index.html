@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Tracking Form</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <header class="form-header">
+            <h1 class="form-title">Recovery Tracking Form</h1>
+        </header>
+        <form action="#" method="post" class="form-body">
+            <div class="form-group">
+                <label for="mood" class="form-label">How are you feeling today?</label>
+                <select
+                    id="mood"
+                    name="mood"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Very Happy">Very Happy</option>
+                    <option value="Content">Content</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Anxious">Anxious</option>
+                    <option value="Depressed">Depressed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="health" class="form-label">How would you rate your physical health today?</label>
+                <select
+                    id="health"
+                    name="health"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                    <option value="Very poor">Very poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sleep" class="form-label">How well did you sleep last night?</label>
+                <select
+                    id="sleep"
+                    name="sleep"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                    <option value="Very poor">Very poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cravings" class="form-label">Have you experienced any cravings or urges to use substances today?</label>
+                <select
+                    id="cravings"
+                    name="cravings"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="No cravings">No cravings</option>
+                    <option value="Mild cravings">Mild cravings</option>
+                    <option value="Moderate cravings">Moderate cravings</option>
+                    <option value="Strong cravings">Strong cravings</option>
+                    <option value="Overwhelming cravings">Overwhelming cravings</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="strategies" class="form-label">What strategies have you used to cope with challenges today?</label>
+                <select
+                    id="strategies"
+                    name="strategies"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Meditation or Mindfulness">Meditation or Mindfulness</option>
+                    <option value="Physical Exercise">Physical Exercise</option>
+                    <option value="Talking to a Support Person">Talking to a Support Person</option>
+                    <option value="Journaling">Journaling</option>
+                    <option value="None of the Above">None of the Above</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="triggers" class="form-label">Have you encountered anything today that made you feel uneasy or triggered? Please describe.</label>
+                <textarea
+                    id="triggers"
+                    name="triggers"
+                    class="form-input"
+                    rows="4"
+                    placeholder="Describe any triggers or uneasy experiences you had today...or write 'None'"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="support" class="form-label">How supported do you feel by your friends and family today?</label>
+                <select
+                    id="support"
+                    name="support"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Very Supported">Very Supported</option>
+                    <option value="Moderately Supported">Moderately Supported</option>
+                    <option value="Somewhat Supported">Somewhat Supported</option>
+                    <option value="Not Supported">Not Supported</option>
+                    <option value="No Support System">No Support System</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="activities" class="form-label">Did you participate in any recovery-related activities or groups today?</label>
+                <select
+                    id="activities"
+                    name="activities"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="progress" class="form-label">How do you feel about your progress in recovery? Please share your thoughts.</label>
+                <textarea
+                    id="progress"
+                    name="progress"
+                    class="form-input"
+                    rows="4"
+                    placeholder="Truthfully describe any thoughts or feelings regarding your recovery. Remember, there is no judgement."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="motivation" class="form-label">How motivated are you to stay on track with your recovery?</label>
+                <select
+                    id="motivation"
+                    name="motivation"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled>Select an option</option>
+                    <option value="Very motivated">Very motivated</option>
+                    <option value="Moderately motivated">Moderately motivated</option>
+                    <option value="Somewhat motivated">Somewhat motivated</option>
+                    <option value="Hardly motivated">Hardly motivated</option>
+                    <option value="Not at all motivated">Not at all motivated</option>
+                </select>
+            </div>
+
+            <button 
+                type="submit" 
+                class="submit-button"
+                disabled
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+</body>
+</html>

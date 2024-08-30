@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Form</title>
+    <style>
+        /* Your existing CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recovery Tracking Form</h1>
+        <form id="recoveryForm" action="/analytics" method="POST">
+            <!-- Form fields here -->
+            <label for="mood">How are you feeling today?</label>
+            <select id="mood" name="mood">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Very Happy">Very Happy</option>
+                <option value="Content">Content</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Anxious">Anxious</option>
+                <option value="Depressed">Depressed</option>
+            </select>
+            <br><br>
+
+            <label for="health">How would you rate your physical health today?</label>
+            <select id="health" name="health">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                <option value="Very poor">Very poor</option>
+            </select>
+            <br><br>
+
+            <label for="sleep">How well did you sleep last night?</label>
+            <select id="sleep" name="sleep">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                <option value="Very poor">Very poor</option>
+            </select>
+            <br><br>
+
+            <label for="cravings">Have you experienced any cravings or urges to use substances today?</label>
+            <select id="cravings" name="cravings">
+                <option value="" disabled selected>Select an option</option>
+                <option value="No cravings">No cravings</option>
+                <option value="Mild cravings">Mild cravings</option>
+                <option value="Moderate cravings">Moderate cravings</option>
+                <option value="Strong cravings">Strong cravings</option>
+                <option value="Overwhelming cravings">Overwhelming cravings</option>
+            </select>
+            <br><br>
+
+            <label for="strategies">What strategies have you used to cope with challenges today?</label>
+            <select id="strategies" name="strategies">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Meditation or Mindfulness">Meditation or Mindfulness</option>
+                <option value="Physical Exercise">Physical Exercise</option>
+                <option value="Talking to a Support Person">Talking to a Support Person</option>
+                <option value="Journaling">Journaling</option>
+                <option value="None of the Above">None of the Above</option>
+            </select>
+            <br><br>
+
+            <label for="triggers">Have you encountered anything today that made you feel uneasy or triggered? Please describe.</label>
+            <textarea id="triggers" name="triggers" rows="4" cols="50" placeholder="Describe any triggers or uneasy experiences you had today...or write 'None'"></textarea>
+            <br><br>
+
+            <label for="support">How supported do you feel by your friends and family today?</label>
+            <select id="support" name="support">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Very Supported">Very Supported</option>
+                <option value="Moderately Supported">Moderately Supported</option>
+                <option value="Somewhat Supported">Somewhat Supported</option>
+                <option value="Not Supported">Not Supported</option>
+                <option value="No Support System">No Support System</option>
+            </select>
+            <br><br>
+
+            <label for="activities">Did you participate in any recovery-related activities or groups today?</label>
+            <select id="activities" name="activities">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br><br>
+
+            <label for="progress">How do you feel about your progress in recovery? Please share your thoughts.</label>
+            <textarea id="progress" name="progress" rows="4" cols="50" placeholder="Truthfully describe any thoughts or feelings regarding your recovery. Remember, there is no judgement."></textarea>
+            <br><br>
+
+            <label for="motivation">How motivated are you to stay on track with your recovery?</label>
+            <select id="motivation" name="motivation">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Very motivated">Very motivated</option>
+                <option value="Moderately motivated">Moderately motivated</option>
+                <option value="Somewhat motivated">Somewhat motivated</option>
+                <option value="Hardly motivated">Hardly motivated</option>
+                <option value="Not at all motivated">Not at all motivated</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

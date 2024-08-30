@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Form</title>
+</head>
+<body>
+
+    <h1>Recovery Tracking Form</h1>
+
+    <form id="recoveryForm">
+        <label for="mood">How are you feeling today?</label>
+        <select id="mood" name="mood">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Happy">Very Happy</option>
+            <option value="Content">Content</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Anxious">Anxious</option>
+            <option value="Depressed">Depressed</option>
+        </select>
+        <br><br>
+
+        <label for="health">How would you rate your physical health today?</label>
+        <select id="health" name="health">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Happy">Excellent</option>
+            <option value="Content">Good</option>
+            <option value="Neutral">Fair</option>
+            <option value="Anxious">Poor</option>
+            <option value="Depressed">Very poor</option>
+        </select>
+        <br><br>
+
+        <label for="sleep">How well did you sleep last night?</label>
+        <select id="sleep" name="sleep">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Happy">Excellent</option>
+            <option value="Content">Good</option>
+            <option value="Neutral">Fair</option>
+            <option value="Anxious">Poor</option>
+            <option value="Depressed">Very poor</option>
+        </select>
+        <br><br>
+
+        <label for="cravings">Have you experienced any cravings or urges to use substances today?</label>
+        <select id="cravings" name="cravings">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Happy">No cravings</option>
+            <option value="Content">Mild cravings</option>
+            <option value="Neutral">Moderate cravings</option>
+            <option value="Anxious">Strong cravings</option>
+            <option value="Depressed">Overwhelming cravings</option>
+        </select>
+        <br><br>
+
+        <label for="strategies">What strategies have you used to cope with challenges today?</label>
+        <select id="strategies" name="strategies">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Happy">Meditation or Mindfulness</option>
+            <option value="Content">Physical Exercise</option>
+            <option value="Neutral">Talking to a Support Person</option>
+            <option value="Anxious">Journaling</option>
+            <option value="Depressed">None of the Above</option>
+        </select>
+        <br><br>
+
+        <label for="triggers">Have you encountered anything today that made you feel uneasy or triggered? Please describe.</label>
+        <textarea id="triggers" name="triggers" rows="4" cols="50" placeholder="Describe any triggers or uneasy experiences you had today...or write 'None'"></textarea>
+        <br><br>
+
+        <label for="support">How supported do you feel by your friends and family today?</label>
+        <select id="support" name="support">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Supported">Very Supported</option>
+            <option value="Moderately Supported">Moderately Supported</option>
+            <option value="Somewhat Supported">Somewhat Supported</option>
+            <option value="Not Supported">Not Supported</option>
+            <option value="No Support System">No Support System</option>
+        </select>
+        <br><br>
+
+        <label for="activities">Did you participate in any recovery-related activities or groups today?
+        </label>
+        <select id="activities" name="activities">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Supported">Yes</option>
+            <option value="Moderately Supported">No</option>
+        </select>
+        <br><br>
+
+        <label for="progress">How do you feel about your progress in recovery? Please share your thoughts.</label>
+        <textarea id="progress" name="progress" rows="4" cols="50" placeholder="Truthfully describe any thoughts or feelings regarding your recovery. Remember, there is no judgement."></textarea>
+        <br><br>
+
+        <label for="motivation">How motivated are you to stay on track with your recovery?</label>
+        <select id="motivation" name="motivation">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Supported">Very motivated</option>
+            <option value="Moderately Supported">Moderately motivated</option>
+            <option value="Somewhat Supported">Somewhat motivated</option>
+            <option value="Not Supported">Hardly motivated</option>
+            <option value="No Support System">Not at all motivated</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('recoveryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const mood = document.getElementById('mood').value;
+            const health = document.getElementById('health').value;
+            const sleep = document.getElementById('sleep').value;
+            const cravings = document.getElementById('cravings').value;
+            const strategies = document.getElementById('strategies').value;
+            const triggers = document.getElementById('triggers').value;
+            const support = document.getElementById('support').value;
+            const activities = document.getElementById('activities').value;
+            const progress = document.getElementById('progress').value;
+            const motivation = document.getElementById('motivation').value;
+
+            const formattedData = [
+                `How are you feeling today?${mood}.How would you rate your physical health today?${health}.How well did you sleep last night?${sleep}.Have you experienced any cravings or urges to use substances today?${cravings}.What strategies have you used to cope with challenges today?${strategies}.How supported do you feel by your friends and family today?${support}.Did you participate in any recovery-related activities or groups today?${activities}.How do you feel about your progress in recovery?${progress}.How motivated are you to stay on track with your recovery?${motivation}.`
+            ]; 
+
+            fetch('{URL}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data: formattedData })
+        })
+        .then(response => response.json())
+        .then(result => {
+            console.log('Success:', result);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+</body>
+</html>

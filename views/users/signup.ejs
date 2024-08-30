@@ -1,18 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SignUp for Odyssey Quest</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<%- layout("/layouts/boilerplate") -%>
+
+<style>
+  body {
+    background-color: #A3B18A; /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1200px;
+
+  }
+  .navbar {
+    background-color: #3A5A40;
+    color: #DAD7CD;
+    width: 1400px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    font-family: 'Poppins', Courier, monospace;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar h1 {
+    font-weight: 500;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+
+  .navbar ul li {
+    display: inline;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #DAD7CD;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .navbar ul li a:hover {
+    color: #A3B18A;
+  }
+  .mt-5 {
+    margin-top: 0rem !important;
+    width: 700px;
+}
+
+  .login-container {
+    background-color: #3A5A40;
+    color: #DAD7CD;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 641px;
+    
+  }
+ 
+  .col-md-8 {
+        flex: 0 0 auto;
+        width: 108.666667%;
+    }
+  .text-center {
+    text-align: center !important;
+    color: #3A5A40;
+}
+
+.mb-3{
+  margin-bottom: 1rem !important;
+}
+  .form-label,
+  .form-control {
+    color: #A3B18A;
+    font-family: 'Poppins', Courier, monospace;
+    font-weight: 500;
+  }
+
+  .form-control {
+    background-color: #A3B18A;
+    border: 1px solid #DAD7CD;
+  }
+
+  .btn {
+    background-color: #A3B18A;
+    color: #3A5A40;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .btn:hover {
+    background-color: #DAD7CD;
+    color: #3A5A40;
+  }
+
+  h2 {
+    color: #DAD7CD;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
+
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-8">
         <h2 class="text-center mb-4">SignUp</h2>
-        <form action="/signup" method="POST" novalidate class="needs-validation">
+        <form action="/signup" method="POST" class="login-container" novalidate class="needs-validation">
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input name="username" id="username" placeholder="Add a username" type="text" class="form-control" required />
@@ -94,7 +220,7 @@
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-success">SignUp</button>
+            <button type="submit" class="btn ">SignUp</button>
           </div>
         </form>
       </div>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire About Health Plans</title>
+    <style>
+        :root {
+            --dark-green: #344E41;
+            --forest-green: #3A5A40;
+            --light-beige: #DAD7CD;
+            --accent-green: #588157;
+            --highlight-green: #A3B18A;
+            --background-image: url('https://th.bing.com/th/id/OIP.eWUOCx6Shrxxfw4JF1HQ5QHaGR?rs=1&pid=ImgDetMain');
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url("https://th.bing.com/th/id/OIP.0ad0wefBnM5_wlwCAB_PMgHaG0?w=600&h=553&rs=1&pid=ImgDetMain") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            color: #fff;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--forest-green);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--dark-green), var(--forest-green));
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: var(--dark-green);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .content {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .content ol {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 0;
+            list-style: decimal;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .content li {
+            margin-bottom: 1rem;
+        }
+
+        .content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .content a:hover {
+            color: var(--highlight-green);
+            text-shadow: 0 0 5px var(--highlight-green);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-btn:hover {
+            background-color: var(--highlight-green);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inquire About Your Health Plan</h1>
+    </header>
+    
+    <main>
+        <div class="content">
+            <p>To inquire about your health plan, follow these simple steps:</p>
+            <ol>
+                <li><strong>Contact Customer Service:</strong> Reach out to our customer service team via phone or email for personalized assistance.</li>
+                <li><strong>Visit Our Website:</strong> Navigate to our <a href="https://example.com/health-plans" target="_blank">Health Plans</a> page to find detailed information and resources.</li>
+                <li><strong>Submit an Inquiry Form:</strong> Fill out the inquiry form available on our website to request more information or schedule a consultation.</li>
+            </ol>
+            <p>If you have any other questions or need immediate assistance, please don't hesitate to <a href="mailto:support@example.com">email us</a>.</p>
+        </div>
+
+        <footer>
+            <a href="/" class="footer-btn">Back to Home</a>
+        </footer>
+    </main>
+</body>
+</html>

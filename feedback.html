@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #344E41;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -100%;
+            background: radial-gradient(circle, transparent 20%, #dad7cd 20%, #dad7cd 22%, transparent 22%, transparent 40%, #dad7cd 40%, #dad7cd 42%, transparent 42%);
+            background-size: 100px 100px;
+            animation: spin-web 30s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes spin-web {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 2;
+            background-color: #a3b18a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #588157;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #344e41;
+            text-align: left;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #344e41;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3a5a40;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2d4a34;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #thankyou-message h2 {
+            color: #588157;
+            margin-top: 20px;
+        }
+
+        .emoji-rating {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .emoji-rating input[type="radio"] {
+            display: none;
+        }
+
+        .emoji-rating label {
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .emoji-rating input[type="radio"]:checked + label {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 15px;
+                width: 90%;
+            }
+
+            .emoji-rating label {
+                font-size: 1.5em;
+            }
+
+            input, textarea, button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <form id="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="rating">Rate your experience:</label>
+            <div class="emoji-rating">
+                <input type="radio" id="very-bad" name="rating" value="very-bad" required>
+                <label for="very-bad">😠</label>
+
+                <input type="radio" id="bad" name="rating" value="bad">
+                <label for="bad">😟</label>
+
+                <input type="radio" id="neutral" name="rating" value="neutral">
+                <label for="neutral">😐</label>
+
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">😊</label>
+
+                <input type="radio" id="very-good" name="rating" value="very-good">
+                <label for="very-good">😍</label>
+            </div>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit 📝</button>
+        </form>
+        <div id="thankyou-message" class="hidden">
+            <h2>Thank you for your feedback!</h2>
+            <a href="./LANDING/landing/index.html">
+            <button">Home</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting normally
+            document.getElementById('feedback-form').classList.add('hidden'); // Hide the form
+            document.getElementById('thankyou-message').classList.remove('hidden'); // Show the thank you message
+        });
+    </script>
+</body>
+</html>

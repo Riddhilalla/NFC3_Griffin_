@@ -55,7 +55,7 @@ router.post("/signup", async (req, res, next) => {
     } catch (error) {
         console.error(error);
         req.flash("error", error.message || "An error occurred during registration. Please try again.");
-        res.redirect("/signup");
+        res.redirect("/login");
     }
 });
 
