@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* globals.css */
+
+:root {
+  --dark-green: #344E41;
+  --forest-green: #3A5A40;
+  --light-beige: #DAD7CD;
+  --accent-green: #588157;
+  --highlight-green: #A3B18A;
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+
+.text-dark-green {
+  color: var(--dark-green);
+}
+
+.bg-forest-green {
+  background-color: var(--forest-green);
+}
+
+.text-forest-green {
+  color: var(--forest-green);
+}
+
+.bg-accent-green {
+  background-color: var(--accent-green);
+}
+
+.text-accent-green {
+  color: var(--accent-green);
+}
+
+.bg-highlight-green {
+  background-color: var(--highlight-green);
+}
+
+.text-highlight-green {
+  color: var(--highlight-green);
+}
