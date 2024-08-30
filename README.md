@@ -1,21 +1,21 @@
 # NFC3_Griffin_
+**Steady Step** is dedicated to supporting individuals on their recovery journey with a comprehensive suite of tools and resources. The website offers a holistic approach to recovery, combining technology and community support to foster lasting change and personal growth. 🌟
+1. **Personalized Care Plans** 🗂️: Tailored recovery plans adapt to user needs through assessments and AI analysis for effective support.
 
-1. Personalized Care Plans: Tailored recovery plans adapt to user needs through assessments and AI analysis for effective support.
+2. **Behavior Tracking & Analytics** 📊: Track mood, health, and sleep with data analyzed to identify patterns and triggers.
 
-2. Behavior Tracking & Analytics: Track mood, health, and sleep with data analyzed to identify patterns and triggers.
+3. **AI-Powered Insights** 🤖: AI provides personalized feedback, coping strategies, and alerts based on user data.
 
-3. AI-Powered Insights: AI provides personalized feedback, coping strategies, and alerts based on user data.
+4. **Online Support Groups** 🌐: Connect with online communities for shared experiences and encouragement.
 
-4. Online Support Groups: Connect with online communities for shared experiences and encouragement.
+5. **Local Support Group Finder** 📍: Locate nearby support groups with information on meetings and locations.
 
-5. Local Support Group Finder: Locate nearby support groups with information on meetings and locations.
+6. **Counseling Services** 🛋️: Access individual and family counseling to address various recovery aspects.
 
-6. Counseling Services: Access individual and family counseling to address various recovery aspects.
+7. **Crisis Hotline** 📞: Reach a 24/7 hotline for immediate support during urgent times.
 
-7. Crisis Hotline: Reach a 24/7 hotline for immediate support during urgent times.
+8. **Feedback & Suggestions** 📝: Provide feedback to help improve the platform and tailor support based on user input.
 
-8. Feedback & Suggestions: Provide feedback to help improve the platform and tailor support based on user input.
+9. **Resource Library** 📚: Access a library of educational materials on addiction and recovery strategies.
 
-9. Resource Library: Access a library of educational materials on addiction and recovery strategies.
-
-10. User-Friendly Interface: Navigate the platform easily with an intuitive and accessible design.
+10. **User-Friendly Interface** 🖥️: Navigate the platform easily with an intuitive and accessible design.
